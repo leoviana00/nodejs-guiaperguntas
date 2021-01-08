@@ -14,7 +14,7 @@ Desenvolvimento de uma plataforma de perguntas e respostas
 ## Instalação 
 ```
 $ npm install express --save
-$ npm install ejs --save
+$ npm install body-parser --save => Responsável por traduzir os dados enviados pelo formulário em uma estrutura js que a gnt consiga usar no backend
 $ npm install nodemon -g
 ```
 
