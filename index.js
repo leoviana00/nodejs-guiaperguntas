@@ -1,12 +1,28 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser')
 const port = 3000;
 
 app.set('view engine','ejs');
 app.use(express.static('public'));
 
+app.use(bodyParser.urlencoded({extend: false}))
+app.use(bodyParser.json())
+
+app.get("/", (req, res) =>{
+    res.send({
+        "Titulo":"Guia de perguntas", 
+        "Versão": "0.1.0",
+        "Status": "UP!"
+    });
+})
+
 app.get("/perguntar", (req, res) =>{
     res.render("perguntar");
+})
+
+app.post("/salvarpergunta", (req, res) =>{
+    res.send("Formulário recebido!");
 })
 
 //app.get("/:nome/:lang", (req, res) => {
