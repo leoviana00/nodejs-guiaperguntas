@@ -10,7 +10,6 @@ Desenvolvimento de uma plataforma de perguntas e respostas
 - mysql
 - ejs
 
-
 ## Instalação 
 ```
 $ npm install express --save
